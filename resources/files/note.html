@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page of Kunpeng Xiao</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+    
+
+    nav {
+      background-color: #000;
+      color: #fff;
+      padding: 15px 30px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .main-content {
+      padding-top: 120px; 
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+        
+    .cards-container {
+      display: flex;
+      flex-direction: column; 
+      align-items: center; 
+      gap: 25px; 
+      margin-top: 50px;
+      margin-bottom: 100px;
+      width: 100%;
+    }
+
+    .card {
+      display: flex; 
+      align-items: center;
+      width: 80%; 
+      max-width: 900px; 
+      background-color: #000;
+      border-radius: 10px;
+      overflow: hidden;
+      color: #fff;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+
+    .card img {
+      width: 200px; 
+      height: 200px;
+      object-fit: cover;
+      flex-shrink: 0;
+      border-radius: 10px 0 0 10px; 
+    }
+
+    .overlay {
+      flex: 1;
+      padding: 20px 25px;
+      background-color: #000; 
+      color: #fff; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .overlay h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #fff;
+      text-align: left;
+    }
+
+    .overlay p {
+      font-size: 1rem;
+      color: #aaa;
+      margin: 0;
+      text-align: left;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    }
+
+
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      position: relative; 
+    }
+  </style>
+</head>
+
+<body>
+  
+  <nav>
+    <a href="https://github.com/Toipha">GitHub</a>
+    <a href="https://www.linkedin.com/in/kunpeng-xiao-7310b1330/">LinkedIn</a>
+    <a href="https://blog.csdn.net/tiphand?spm=1000.2115.3001.5343">CSDN</a>
+  </nav>
+
+
+  <!-- 主内容 -->
+  <div class="main-content">
+    <h1>Abgeschlossene Übungen an der HU</h1>
+    <p><b>Auf dieser Seite finden Sie Informationen zu meinen aufgezeichneten Übungen.</b></p>
+
+    <!-- 卡片区域 -->
+
+  </div>
+
+      <div class="cards-container">
+
+      <a href="PM.pdf" class="card" target="_blank">
+        <img src="PM.png" alt="Leistung">
+        <div class="overlay">
+          <h3>Process Mining</h3>
+          <p>In der Übung wurden habe ich eine wissenschaftliche Arbeit reproduziert.
+              Dabei ging es darum, Process Discovery mithilfe von Graph Neural Networks (GNN) durchzuführen.
+              Wir haben die Reproduktion erfolgreich abgeschlossen und die Ergebnisse auf dem Originaldatensatz der Arbeit validiert.
+              Durch Klicken auf dieses Feld gelangen Sie zur Übungsbericht-Seite.</p>
+        </div>
+      </a>
+
+      <a href="https://github.com/maschinelles-lernen-hu-berlin/exercise-sheet-2-Toipha" class="card" target="_blank">
+        <img src="NLP.png" alt="Übung">
+        <div class="overlay">
+          <h3>Deep Learning und Natural Language Processing</h3>
+          <p>In der Übung dieses Kurses wurden wir schrittweise aufgefordert, zentrale Komponenten der natürlichen Sprachverarbeitung (NLP) zu implementieren, darunter –
+             aber nicht beschränkt auf – die Erzeugung von Bag-of-Words, die Einbettung von Wortvektoren (Embeddings) sowie die Implementierung eines
+             neuronalen Klassifikationsmodells.
+             Durch Klicken auf dieses Feld gelangen Sie zum GitHub-Repository dieses Projekts.</p>
+        </div>
+      </a>
+
+      <a href="https://github.com/Toipha/Kognitiv_Robotics" class="card" target="_blank">
+        <img src="KognitiveRobotiks.png" alt="Projekt">
+        <div class="overlay">
+          <h3>Kognitiv Robotik</h3>
+          <p>Die Übung dieses Kurses war besonders interessant:
+            Wir sollten in der Simulationsumgebung Webots mithilfe von Python Robotersteuerungen umsetzen – 
+            entweder durch selbst entworfene Roboter oder über die API-Schnittstelle des Nao-Roboters.
+            Ziel war es, eine Reihe von Steuerungsaufgaben zu realisieren, wie etwa Zielerkennung und -verfolgung.
+            Durch Klicken auf dieses Feld gelangen Sie zum GitHub-Repository dieses Projekts.</p>
+        </div>
+      </a>
+
+      
+      <a href="https://github.com/Toipha/Bioinformatik" class="card" target="_blank">
+        <img src="Bio.png" alt="Projekt">
+        <div class="overlay">
+          <h3>Bioinformatik</h3>
+          <p>In der Übung dieses Kurses wurden wir beauftragt, verschiedene Algorithmen der Bioinformatik in Python zu implementieren, darunter Suffix Trees, Z-Box und BLAST.
+              Durch Klicken auf dieses Feld gelangen Sie zum GitHub-Repository dieses Projekt</p>
+        </div>
+      </a>
+
+    </div>
+
+  <!-- 底部 -->
+  <footer>
+    <p>Persönliche Email: xkunpenggy@gmail.com / kunpeng.xiao@student.hu-berlin.de</p>
+  </footer>
+
+</body>
+</html>

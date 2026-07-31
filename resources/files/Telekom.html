@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Werkstudent · Business Development (Fokus AI)</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    :root {
+      --pink: #e20074;
+      --white: #ffffff;
+      --black: #000000;
+      --radius: 10px;
+    }
+    body {
+      margin: 0;
+      padding: 60px 10%;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--white);
+      background: var(--black);
+      overflow-x: hidden;
+    }
+    h1 {
+      color: var(--pink);
+      font-size: 2em;
+      margin-bottom: 0.2em;
+    }
+    h2 {
+      color: var(--white);
+      font-size: 1.4em;
+      margin-top: 1.6em;
+    }
+    p {
+      color: var(--white);
+      line-height: 1.6;
+      font-size: 1em;
+    }
+    .section {
+      background: #111;
+      border-radius: var(--radius);
+      padding: 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 2px 10px rgba(255,255,255,0.1);
+    }
+    .subtitle {
+      color: var(--pink);
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-size: 0.9em;
+    }
+    .chart-container {
+      position: relative;
+      height: 400px;
+      width: 100%;
+      margin-top: 30px;
+    }
+    a.pdf-link {
+      display: inline-block;
+      background: var(--pink);
+      color: var(--white);
+      padding: 12px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    a.pdf-link:hover {
+      background: #ff3b9a;
+    }
+
+    .video-container {
+      margin-top: 20px;
+    }
+
+    .video-embed {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 2px 10px rgba(255,255,255,0.1);
+    }
+
+    .video-embed iframe,
+    .video-embed video {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="section">
+    <div class="subtitle"></div>
+    <h1>Research stage presentation (EBM)</h1>
+  </div>
+
+  <div class="section">
+    <h2>Input and Output</h2>
+    <p>Input 1:"I am a student and rent an apartment in Neonwood, 
+                for next semester I would like to continue my contract with the landlord 
+                in this case, will I get my deposit back, and give it again to the landlord? 
+                Or I will not receive back my deposit for the current contract because it would be conveyed 
+                to the new contract? Plz respond shortly and with references" 
+    </p>
+    <p>Input 2: My personal rent contract
+
+    </p>
+    <p>Output (BY phi3):
+       According to the provided context on pages p.2, your deposit will not automatically transfer back into a new contract if you choose to renew for another semester without explicitly stating reasons in writing as per § 21 Schlussbestimmungen (p.2). The return of the full amount is contingent upon fulfilling all obligations and conditions at the end of your current lease, not just its continuation or cancellation [p.2]. Therefore, if you do extend your stay within Neon Wood as a student without stating reasons for terminating your contract (as per § 21), it is likely that no further deposit will be returned to you at this time. Always check the specific terms and consult directly with Cresco Immobilien Verwaltungs GmbH or reference their policies on lease renewals to understand how the process works in detail [p.2].
+    </p>
+
+  </div>
+
+<div class="video-container">
+  <h2>EBM_chunkandgraph (JSON)</h2>
+  <p>Download the processed results as JSON files:</p>
+
+  <a class="pdf-link"
+     href="ebm_chunks.json"
+     download
+     style="margin-right: 10px;">
+    Download JSON 1
+  </a>
+
+  <a class="pdf-link"
+     href="ebm_rule_graph.json"
+     download>
+    Download JSON 2
+  </a>
+</div>
+
+
+<div class="section">
+  <h2>Manuelly processed KG experiment</h2>
+  <p>KG + RAG + GPT</p >
+
+  <a class="pdf-link"
+     href="https://chatgpt.com/share/695ebac1-15cc-8011-b00b-d3b9d8ae1882"
+     target="_blank"
+     rel="noopener noreferrer">
+    Open ChatGPT Share Link
+  </a >
+</div>
+
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page of Kunpeng Xiao</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    /* 顶部导航栏 */
+    nav {
+      background-color: #000;
+      color: #fff;
+      padding: 15px 30px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* 轮播区 */
+    .carousel {
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      overflow: hidden;
+    }
+
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      animation: fade 12s infinite;
+    }
+
+    .carousel img:nth-child(1) { animation-delay: 0s; }
+    .carousel img:nth-child(2) { animation-delay: 4s; }
+    .carousel img:nth-child(3) { animation-delay: 8s; }
+
+    @keyframes fade {
+      0% { opacity: 0; }
+      10% { opacity: 1; }
+      30% { opacity: 1; }
+      40% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    /* 主体内容 */
+    .main-content {
+      padding: 120px 20px 20px; 
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .main-content h1 {
+      font-size: 2.3rem;
+      margin-bottom: 15px;
+    }
+
+    .cards-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin-top: 50px;
+      margin-bottom: 150px;
+    }
+
+    /* 卡片样式 */
+    .card {
+      position: relative;
+      width: 300px;  
+      height: 400px; 
+      overflow: hidden;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    /* 文字叠加层 */
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6));
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      padding: 20px;
+      opacity: 1;
+      transition: opacity 0.4s ease;
+    }
+
+    .overlay h3 {
+      font-size: 1.3rem;
+      margin: 0 0 5px;
+      text-align: left; 
+    }
+
+    .overlay p {
+      font-size: 0.9rem;
+      color: #ddd;
+      margin: 0;
+      text-align: left; 
+    }
+
+    /* 悬停效果 */
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+    }
+
+    /* 底部 */
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      position: relative; 
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 顶部导航栏 -->
+  <nav>
+    <a href="https://github.com/Toipha">GitHub</a>
+    <a href="https://www.linkedin.com/in/kunpeng-xiao-7310b1330/">LinkedIn</a>
+    <a href="https://blog.csdn.net/tiphand?spm=1000.2115.3001.5343">CSDN</a>
+  </nav>
+
+  <!-- 大图轮播 -->
+  <div class="carousel">
+    <img src="resources/Loop/1.jpg" alt="Bild 1" class="slide">
+    <img src="resources/Loop/2.jpg" alt="Bild 2" class="slide">
+    <img src="resources/Loop/3.jpg" alt="Bild 3" class="slide">
+  </div>
+
+  <!-- 主内容 -->
+  <div class="main-content">
+    <h1>Willkommen auf Kunpengs Webseite!</h1>
+    <p><b>Diese Webseite dient dazu, einige persönliche Informationen zu speichern und anzuzeigen.</b></p>
+    <p><b>欢迎来到肖坤朋的主页,本网页主要用于记录和展示一些项目经历</b></p>
+
+    <!-- 卡片区域 -->
+    <div class="cards-container">
+
+      <a href="resources/files/Transcript.pdf" class="card" target="_blank">
+        <img src="resources/files/Noten.jpg" alt="Leistung">
+        <div class="overlay">
+          <h3>Notenspiegel</h3>
+          <p>Transkript der Leistungen an der HU</p>
+        </div>
+      </a>
+
+      <a href="resources/files/note.html" class="card" target="_blank">
+        <img src="resources/files/Uebung.jpg" alt="Übung">
+        <div class="overlay">
+          <h3>Abgeschlossene Übungen</h3>
+          <p>Einführung in die abgeschlossene Übung</p>
+        </div>
+      </a>
+
+      <a href="resources/files/PowerPoint.pdf" class="card" target="_blank">
+        <img src="resources/files/Projekt.png" alt="Projekt">
+        <div class="overlay">
+          <h3>Powerpoint</h3>
+          <p>Powerpoint der Vorlesung Künstliche Intelligenz in der Chemie bei Dr. Thorsten Gressling</p>
+        </div>
+      </a>
+
+
+      <a href="resources/files/Resumee.pdf" class="card" target="_blank">
+        <img src="resources/files/LL.jpg" alt="Übung">
+        <div class="overlay">
+          <h3>Lebenslauf</h3>
+          <p>Lebenslauf für Kunpeng Xiao</p>
+        </div>
+      </a>
+
+      <a href="resources/files/Telekom.html" class="card" target="_blank">
+        <img src="resources/files/Telekom.png" alt="Übung">
+        <div class="overlay">
+          <h3>Telekom</h3>
+          <p>AI Portfolio und Datenvisualisierung Demo</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+
+  <footer>
+    <p>Persönliche Email: xkunpenggy@gmail.com / kunpeng.xiao@student.hu-berlin.de</p>
+  </footer>
+
+</body>
+</html>
