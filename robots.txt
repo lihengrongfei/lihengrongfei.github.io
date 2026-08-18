@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lihengrf.github.io/sitemap.xml
